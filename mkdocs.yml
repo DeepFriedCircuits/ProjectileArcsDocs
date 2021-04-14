@@ -3,9 +3,9 @@ site_name: Projectile Arcs - Documentation
 
 nav:
     - Home: index.md
-    - Getting Started:
-        - Setting Up Input: GettingStarted.md
-        - Radial Menu Settings: CustomizingArcs.md
+    - Documentation:
+        - Getting Started: GettingStarted.md
+        - Customizing Arcs: CustomizingArcs.md
 # Configuration
 theme:
   name: null
