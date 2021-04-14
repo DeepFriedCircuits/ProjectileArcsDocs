@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Setting Up Input - Projectile Arcs - Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Setting Up Input";
+    var mkdocs_page_input_path = "GettingStarted.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/django.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Projectile Arcs - Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Getting Started</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">Setting Up Input</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#getting-started">Getting Started</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#creating-your-first-arc">Creating your first arc</a></li>
+        
+            <li><a class="toctree-l4" href="#event-binding">Event Binding</a></li>
+        
+            <li><a class="toctree-l4" href="#updating-the-arc">Updating the Arc</a></li>
+        
+            <li><a class="toctree-l4" href="#launching-projectiles">Launching Projectiles</a></li>
+        
+            <li><a class="toctree-l4" href="#wrapping-up">Wrapping Up</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../CustomizingArcs/">Radial Menu Settings</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Projectile Arcs - Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Getting Started &raquo;</li>
+        
+      
+    
+    <li>Setting Up Input</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="getting-started">Getting Started</h1>
+<p><img alt="Rustwalker Legends" src="../img/throwing_arc.png" />
+<em>Projectile Arcs in</em> <strong><em><a href="https://rustwalkerlegends.com">Rustwalker Legends</a></em></strong></p>
+<p>Projectile Arcs are a relatively quick process, and can be customized to look how you want.</p>
+<h2 id="creating-your-first-arc">Creating your first arc</h2>
+<p>First, find the node where you'll be creating the arcs from. In this situation, I'll be creating an arc on the aim key down <em>(Right Mouse Button)</em>. From the on pressed node, drag off and search for <code>CreateArc</code>. This arc will need to be stored for later use, so put that into a new variable.</p>
+<p><img alt="Create Arc" src="../img/create_arc.png" /></p>
+<h2 id="event-binding">Event Binding</h2>
+<p>Next up, the arc needs to be updated. This is done with an event dispatcher called <code>Request Positions</code>. If you're not familiar with <strong><a href="https://docs.unrealengine.com/en-US/ProgrammingAndScripting/Blueprints/UserGuide/EventDispatcher/index.html">Event Dispatchers</a></strong> don't worry, you won't have to deal with them much at all here. Just drag off of the blue pin of the new arc, and search for <code>Assign Request Positions</code>.</p>
+<p><img alt="" src="../img/assign_arc.png" /></p>
+<p>This will create a new event for us, bound to the event dispatcher <code>RequestPositions</code> which will be called <strong>every frame of the arcs existence</strong>.</p>
+<p><img alt="" src="../img/bound_arc.png" /></p>
+<h2 id="updating-the-arc">Updating the Arc</h2>
+<p>From this new node, you'll be able to update the arcs start, end, color, height, etc... every frame. Just search for <code>Update Arc</code> while dragging from the blue pin.</p>
+<p><img alt="" src="../img/find_functions.png" /></p>
+<p>These macros were design to chain together, making it easy to quickly update whatever parts needed on the arc without making the graph messy. Just take the return node and connect to another set.</p>
+<p><img alt="" src="../img/update_arc.png" /></p>
+<p>You can call as many of these as necessary, or just the <code>UpdateArcPositions</code>.</p>
+<p>Next, we need to have the arc clean up after use. When your done with the arc, just call <code>CleanupArc</code>, and it'll be removed from the game.</p>
+<p><img alt="" src="../img/cleanup_arc.png" /></p>
+<h2 id="launching-projectiles">Launching Projectiles</h2>
+<p>Now, you probably want to throw something. I do too, but that could be because I've been writing documentation. To make a projectile fly, create an actor blueprint with a <strong><a href="https://docs.unrealengine.com/en-US/Basics/Components/Movement/index.html">Projectile Movement Component</a></strong>. Make sure the root component has collision, and spawn in an actor from the blueprint you created your arc in. Next, it's just a matter of calling <code>LaunchActorProjectileOnArc</code> (or <code>LaunchProjectileOnArc</code> if you don't want to use the actor reference).</p>
+<p><img alt="" src="../img/launch_projectile.png" /></p>
+<h2 id="wrapping-up">Wrapping Up</h2>
+<p>You should now have a thrown projectile, that goes where you point your arc!</p>
+<p><img alt="" src="../img/throw.gif" /></p>
+<p>Next, we'll go over how to make a new arc that looks unique for your game!</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../CustomizingArcs/" class="btn btn-neutral float-right" title="Radial Menu Settings">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../CustomizingArcs/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
