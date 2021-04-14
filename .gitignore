@@ -1,5 +1,8 @@
-*
-
 !.gitignore
-!./docs/*
-!mkdocs.yml
+!*.md
+!*.yaml
+!*.png
+!*.gif
+
+site/*
+
