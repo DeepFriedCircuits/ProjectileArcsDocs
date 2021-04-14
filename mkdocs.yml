@@ -1,0 +1,8 @@
+site_name: Projectile Arcs
+theme:
+  name: readthedocs
+  nav_style: light
+nav:
+  - 'index.md'
+  - 'GettingStarted.md'
+  - 'CustomizingArcs.md'
