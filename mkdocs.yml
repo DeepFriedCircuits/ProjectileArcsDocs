@@ -1,7 +1,7 @@
   
 site_name: Projectile Arcs - Documentation
 
-pages:
+nav:
     - Home: index.md
     - Getting Started:
         - Setting Up Input: GettingStarted.md
