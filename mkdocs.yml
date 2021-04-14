@@ -1,8 +1,14 @@
-site_name: Projectile Arcs
+  
+site_name: Projectile Arcs - Documentation
+
+pages:
+    - Home: index.md
+    - Getting Started:
+        - Setting Up Input: GettingStarted.md
+        - Radial Menu Settings: CustomizingArcs.md
 theme:
-  name: readthedocs
-  nav_style: light
-nav:
-  - 'index.md'
-  - 'GettingStarted.md'
-  - 'CustomizingArcs.md'
+    name: readthedocs
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - django
