@@ -3,7 +3,7 @@
 ![Rustwalker Legends](img/throwing_arc.png)
 _Projectile Arcs in_ ***[Rustwalker Legends](https://rustwalkerlegends.com)***
 
-Projectile Arcs are a relatively quick process, and can be customized to look how you want.
+Implementing Projectile Arcs into your project is a relatively quick process, and can be customized to look how you want.
 
 ## Creating your first arc
 First, find the node where you'll be creating the arcs from. In this situation, I'll be creating an arc on the aim key down _(Right Mouse Button)_. From the on pressed node, drag off and search for `CreateArc`. This arc will need to be stored for later use, so put that into a new variable.
